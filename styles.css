@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  display: flex;
+  padding: 1.5rem;
+  margin: auto;
+  height: 100vh;
+  background-image: url("https://media1.giphy.com/media/4OAxDXv4RdUeg38JYi/giphy.gif?cid=790b76113282fbe057d58550b13935d918aa7b239a80b9a9&rid=giphy.gif&ct=g");
+
+  font-family: "Courier Prime", monospace;
+
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  color: rgb(0, 206, 0) !important;
+}
+
+input::placeholder {
+  color: rgb(0, 206, 0) !important;
+}
+
+.form-control {
+  background-color: white;
+  border: none;
+}
+
+.port {
+  position: absolute;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: white;
+  font-weight: 500;
+
+  top: 10px;
+  left: 24px;
+}
+
+.flix {
+  color: rgb(0, 206, 0);
+}
+
+button.bb {
+  display: flex;
+  background: transparent;
+  border: none;
+  color: white;
+
+  margin: 0 auto;
+
+  flex-direction: row;
+  justify-content: center;
+}
+
+.caixa {
+  background: rgb(0, 26, 0, 0.4);
+  border-radius: 15px;
+
+  top: 40px;
+  width: 400px;
+  height: 450px;
+
+  margin: auto 0px;
+  backdrop-filter: blur(10px);
+}
+
+.ent-tx::before {
+  position: absolute;
+  content: "";
+  background: rgb(0, 65, 0);
+
+  animation: colors ease-in infinite;
+  animation-duration: 500ms;
+
+  height: 25px;
+  width: 4px;
+
+  top: 91.5px;
+  left: 20px;
+
+  border-radius: 0px;
+}
+
+@keyframes colors {
+  0% {
+    background: transparent;
+  }
+
+  50% {
+    background: rgb(0, 206, 0);
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+
+.cor-b {
+  padding: 10px 10px;
+  border: none;
+  background: rgb(0, 206, 0);
+  color: white;
+  text-transform: Uppercase;
+  margin: 25px 0;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.cor-b:hover {
+  background: rgb(0, 100, 0);
+  color: white;
+  --bs-btn-color: none;
+  --bs-btn-hover-border-color: none;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.ent-tx {
+  color: white;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+@media (max-height: 650px) {
+  .port,
+  .flix {
+    position: absolute;
+    color: transparent;
+    padding: 0px;
+  }
+  .caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+@media (max-height: 480px) {
+  .caixa {
+    width: 100%;
+    position: absolute;
+    padding: 0% 100%;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+
+    height: 400px;
+    width: 354px;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .port {
+    font-weight: 400;
+    font-size: 50px;
+  }
+
+  .flix {
+    background: rgba(0, 100, 0, 0.048);
+    backdrop-filter: blur(10px);
+  }
+}
+
+
+.slider{
+  overflow: hidden;
+
+}
+.slider > .slider-content{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: all 500ms ease;
+
+}
+
+.slider > .slider-content > .slider-item {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.slider > input:nth-child(1):checked ~ .slider-content{
+  transform: translateX(0%);
+}
+
+.slider > input:nth-child(2):checked ~ .slider-content{
+  transform: translateX(-100%);
+}
+.slider > input:nth-child(3):checked ~ .slider-content{
+  transform: translateX(-200%);
+}
+
+.slider > input:nth-child(4):checked ~ .slider-content{
+  transform: translateX(-300%);
+}
